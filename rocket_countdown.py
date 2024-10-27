@@ -24,7 +24,7 @@ def launch_rocket():
 
     print("Liftoff!")
     
-    while height < 15:
+    while height < 20:
         print("\n" * (20 - height))
         print("\n".join(rocket))
         print("\n" * height)
