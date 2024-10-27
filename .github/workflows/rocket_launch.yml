@@ -24,3 +24,12 @@ jobs:
     
     - name: Run rocket launch script
       run: python rocket_countdown.py
+      
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v1.1.0
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: 22
+        script: whoami
